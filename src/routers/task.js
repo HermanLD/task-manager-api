@@ -82,7 +82,6 @@ router.patch("/tasks/:id", auth, async (req, res) => {
       _id: req.params.id,
       owner: req.user._id,
     });
-    // const task = await Task.findById(req.params.id);
 
     if (!task) return res.status(404).send({ error: "Task not found" });
 
